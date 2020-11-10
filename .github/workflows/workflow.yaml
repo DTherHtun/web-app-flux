@@ -41,7 +41,7 @@ jobs:
         go build -ldflags="-w -s" -a -installsuffix cgo
     - name: Sent Noti
       if: ${{ always() }}
-      uses: DTherHtun/google-chat-action@v0.8
+      uses: dtherhtun/google-chat-action@v0.8
       with:
         project: ${{ github.repository }}
         commit: ${{ steps.slug.outputs.sha8 }}
